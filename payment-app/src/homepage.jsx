@@ -54,11 +54,54 @@ const HomePage = () => {
       <section4 class="indent-1">
         <br />
             <section>
-                  <img height={'50px'} width={'50px'} src='https://replay.software/sleeve/images/IconArrayArtworkDark@2x.png'/>
+                <div style={{marginTop: '15vh'}}>
+                  <img height={'70px'} width={'70px'} src='https://replay.software/sleeve/images/IconArrayArtworkDark@2x.png'/>
                   <h3 className='textwhite'>Artwork</h3>
-                  <p className='textwhite'>Scale artwork all the way up or all the way down. Round the corners or leave them square.    
-                      <br/>Choose shadow and lighting effects to bring your album artwork to life.
+                  <p className='textwhite'>Scale artwork all the way up or all the way down. <br /> Round the corners or leave them square. <br />    
+                      <br/>Choose shadow and lighting effects to bring <br /> your album artwork to life. <br />
                       <br/>Or hide it completely.</p>
+                </div>
+
+                <div className='spacebox'>
+                <img height={'70px'} width={'70px'} src='https://replay.software/sleeve/images/IconArrayTrackDark.png'/>
+                  <h2 className='textwhite'>Typography</h2>
+                  <p className='textwhite'>
+                  Pick the track info you want to <br /> display, and then exactly how to display it.
+                  <br /><br />
+                  Choose the fonts, weights, sizes, and transparency to <br /> use for each line, along with customizing color and shadow.
+                  </p>
+                </div>
+
+                <div className='spacebox'>
+                  <div style={{display : 'inline-block', marginLeft: '20px'}}>
+                  <img height={'70px'} width={'70px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconArrayLayoutDark.png'/>
+                  <img height={'65px'} width={'65px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconPositionDark.png'/>
+                  <img height={'60px'} width={'60px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconInterfaceDark.png'/>
+
+                  </div>
+                  <h2 className='textwhite'>Interface</h2>
+                  <p className='textwhite'>
+                  Customize the layout, alignment and position to fit your setup. <br />
+                  Show and hide playback controls. Add a backdrop layer and customize it.
+                  </p>
+                </div>
+
+                <div className='spacebox'>
+                  <div style={{display : 'inline-block' , marginLeft: '20px'}}>
+                  <img height={'70px'} width={'70px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconArrayWindowDark.png'/>
+                  <img height={'65px'} width={'65px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconHotkeysDark.png'/>
+                  <img height={'60px'} width={'60px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconSettingsDark.png'/>
+
+                  </div>
+                  <h2 className='textwhite'>Settings</h2>
+                  <p className='textwhite'>
+                  Decide if Sleeve stays out of the way, behind windows, or in front of them — or only when you need to see it.
+                  <br />
+                  Show it in the Dock, choose from custom icons, or keep it on the Desktop only.
+                  <br />
+                  Set your custom keyboard shortcuts and integrate with the apps you use.
+                  </p>
+                </div>
               </section>
 
               <section>
@@ -66,10 +109,31 @@ const HomePage = () => {
                     <img className='image' id='i1' width={'330px'}  src='https://replay.software/sleeve/images/Artwork1Dark@2x.jpg'/>
                     <img className='image' width={'330px'}  src='https://replay.software/sleeve/images/Artwork2Dark@2x.jpg'/>
                     <img className='image' width={'330px'}  src='https://replay.software/sleeve/images/Artwork3Dark@2x.jpg'/>
-
                   </div>
+
+                  <div className='box'>
+                    <img className='image' id='i1' width={'330px'}  src='https://replay.software/sleeve/images/Typography1Dark@2x.jpg'/>
+                    <img className='image' width={'330px'}  src='https://replay.software/sleeve/images/Typography2Dark@2x.jpg'/>
+                  </div>
+
+                  <div className='box'>
+                    <img className='image' id='i1' width={'330px'}  src='https://replay.software/sleeve/images/Interface1Dark@2x.jpg'/>
+                    <img className='image' width={'330px'} style={{marginTop: '-30px'}}  src='https://replay.software/sleeve/images/Interface2Dark@2x.jpg'/>
+                  </div>
+
+                  <div className='box'>
+                    <img className='image' id='i1' width={'330px'}  src='https://replay.software/sleeve/images/Settings1Dark@2x.jpg'/>
+                    <img className='image' width={'330px'} style={{marginTop: '-30px'}}  src='https://replay.software/sleeve/images/Settings2Dark@2x.jpg'/>
+                    <img className='image' width={'330px'} style={{marginTop: '-40px'}}  src='https://replay.software/sleeve/images/Settings3Dark@2x.jpg'/>
+                  </div>
+
             </section>
       </section4>  
+
+      <section5>
+        <span style={{color: 'red', fontSize: '10px'}}>INTEGRATIONS</span>
+        <h1 className='textwhite'>Like, Scrobble.</h1>
+      </section5>
       
     </div>
   );

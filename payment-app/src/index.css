@@ -36,7 +36,7 @@ code {
 .box{
   background-image: url(https://replay.software/sleeve/images/SonomaWallpaperDark@2x.jpg);
   width: 500px;
-  height: 100vh;
+  height: 100svh;
 }
 
 .image{
@@ -45,4 +45,8 @@ code {
 
 #i1{
   margin-top: 10vh;
+}
+
+.spacebox{
+  margin-top: 45vh;
 }
