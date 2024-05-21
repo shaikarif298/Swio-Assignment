@@ -1,0 +1,48 @@
+body {
+  background-color: black;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.homebody{
+  background-color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.textwhite{
+  color: aliceblue;
+}
+
+.indent-1 {
+  margin-top: 20vh;
+  float: left;
+  text-align: left;
+  margin-left: 30vh;
+}
+.indent-1 section {
+  
+  width: 50%; float: left;}
+
+.box{
+  background-image: url(https://replay.software/sleeve/images/SonomaWallpaperDark@2x.jpg);
+  width: 500px;
+  height: 100vh;
+}
+
+.image{
+  margin-left: 10vh;
+}
+
+#i1{
+  margin-top: 10vh;
+}
