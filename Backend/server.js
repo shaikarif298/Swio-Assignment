@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const Stripe = require('stripe');
 const mysql = require('mysql');
@@ -5,14 +6,9 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
-const stripe = Stripe('sk_test_51PIo8OSI0oT3bKNcixjg1tCpZHVlJnl8fkZfL3Mvq8Cq2Q5WUd3wHaRYzyjXicWcUhzaOj9IhJBqp1m0QUXtlWCu00QEmYBLap');
+const stripe = Stripe(process.env.STRIPE);
 
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'payments'
-});
+const db = mysql.createConnection('mysql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}');
 
 db.connect((err) => {
   if (err) throw err;
@@ -83,6 +79,6 @@ app.post('/retrieve-checkout-session', async (req, res) => {
 });
 
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log('Server running on port 5000');
 });
