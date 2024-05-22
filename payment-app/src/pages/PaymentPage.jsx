@@ -9,7 +9,7 @@ const PaymentPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/create-checkout-session', { name, amount });
+      const response = await axios.post('https://swio-assignment-backend.onrender.com/create-checkout-session', { name, amount });
       const { sessionId } = response.data;
 
       // Redirect to Stripe Checkout page

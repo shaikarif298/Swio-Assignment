@@ -6,7 +6,7 @@ const TransactionsPage = () => {
 
   useEffect(() => {
     const fetchTransactions = async () => {
-      const response = await axios.get('http://localhost:5000/transactions');
+      const response = await axios.get('https://swio-assignment-backend.onrender.com/transactions');
       setTransactions(response.data);
     };
 
