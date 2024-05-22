@@ -13,7 +13,7 @@ const PaymentPage = () => {
       const { sessionId } = response.data;
 
       // Redirect to Stripe Checkout page
-      const stripe = await loadStripe('pk_test_51PIo8OSI0oT3bKNcWX9C6Ot440ztQgUy3FoCG7CFYQMevF1CYvmy8xt7OehotF7qeA6tGxaFXy7ZW92uaBLclZU400qo0hddCj');
+      const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
       stripe.redirectToCheckout({ sessionId });
     } catch (error) {
       console.error('Error creating checkout session', error);

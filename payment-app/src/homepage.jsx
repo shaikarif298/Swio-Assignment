@@ -15,7 +15,7 @@ const HomePage = () => {
         </h1>
         <p className='textwhite'>Sleeve sits on the desktop, displaying and controlling the music you're <br /> currently playing in 
                 Image of an app icon Apple Music, Image of an app icon Spotify, and Image of an app icon Doppler.</p>
-        <button className='button' type="button" onClick={()=> navigate("/PaymentPage")}>bill pay</button>
+        <button className='btn' variant="outlined" onClick={()=> navigate("/PaymentPage")}>bill pay</button>
       </section1>
 
       <section2>
@@ -81,12 +81,12 @@ const HomePage = () => {
                   </div>
                   <h2 className='textwhite'>Interface</h2>
                   <p className='textwhite'>
-                  Customize the layout, alignment and position to fit your setup. <br />
+                  Customize the layout, alignment and position to fit your setup. <br /><br />
                   Show and hide playback controls. Add a backdrop layer and customize it.
                   </p>
                 </div>
 
-                <div className='spacebox'>
+                <div className='spacebox1'>
                   <div style={{display : 'inline-block' , marginLeft: '20px'}}>
                   <img height={'70px'} width={'70px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconArrayWindowDark.png'/>
                   <img height={'65px'} width={'65px'} style={{marginLeft : '-30px'}} src='https://replay.software/sleeve/images/IconHotkeysDark.png'/>
@@ -96,9 +96,9 @@ const HomePage = () => {
                   <h2 className='textwhite'>Settings</h2>
                   <p className='textwhite'>
                   Decide if Sleeve stays out of the way, behind windows, or in front of them — or only when you need to see it.
-                  <br />
+                  <br /><br />
                   Show it in the Dock, choose from custom icons, or keep it on the Desktop only.
-                  <br />
+                  <br /><br />
                   Set your custom keyboard shortcuts and integrate with the apps you use.
                   </p>
                 </div>
@@ -130,7 +130,7 @@ const HomePage = () => {
             </section>
       </section4>  
 
-      <section5>
+      <section5 className="footer">
         <span style={{color: 'red', fontSize: '10px'}}>INTEGRATIONS</span>
         <h1 className='textwhite'>Like, Scrobble.</h1>
       </section5>

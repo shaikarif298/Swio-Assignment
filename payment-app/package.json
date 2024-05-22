@@ -5,7 +5,14 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.1",
+    "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@stripe/react-stripe-js": "^2.7.1",
     "@stripe/stripe-js": "^3.4.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -16,6 +23,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.24.5"
   }
 }
