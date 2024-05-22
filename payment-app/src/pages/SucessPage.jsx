@@ -37,13 +37,13 @@ const SuccessPage = () => {
 
   return (
     <div>
-      <h1>Payment Successful!</h1>
+      <h1 className='textwhite'>Payment Successful!</h1>
     
         <div className="transactions-grid">
         {transactions.map((transaction) => (
           <div className="transaction-card" key={transaction.transactionID}>
-            <p>Name: {transaction.name}</p>
-            <p>Amount: {transaction.amount}</p>
+            <p className='textwhite'>Name: {transaction.name}</p>
+            <p className='textwhite'>Amount: {transaction.amount}</p>
           </div>
         ))}
       </div>

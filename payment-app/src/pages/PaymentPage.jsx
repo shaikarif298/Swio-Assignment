@@ -22,6 +22,9 @@ const PaymentPage = () => {
   };
 
   return (
+    <div>
+    <h1 className='text-center mb-4 textwhite' style={{marginLeft: '65vh',marginTop: '100px'}}>Fill the Details for Payment</h1>
+    <div className='container' style={{display: 'flex', marginLeft: '65vh'}}>
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -39,6 +42,10 @@ const PaymentPage = () => {
       />
       <button type="submit">Submit</button>
     </form>
+    <br />
+    </div>
+    <p className='textwhite' style={{marginLeft: '80vh',color: 'crimson'}}><br /> thankyou for chosing us</p>
+    </div>
   );
 };
 

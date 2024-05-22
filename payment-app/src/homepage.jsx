@@ -8,14 +8,13 @@ const HomePage = () => {
   return (
     <div className='homebody'>
       <section1 >
-        <h1 className='textwhite'><b>Sleeve</b> 2
-        <br/>
-        The ultimate music accessory for your Mac.
-
-        </h1>
+        <h1 className='textwhite' style={{fontSize: "50px"}}><b>Sleeve</b> 2
+        <br/></h1>
+        <h1 className='textwhite'>
+        The ultimate music accessory for your Mac.</h1>
         <p className='textwhite'>Sleeve sits on the desktop, displaying and controlling the music you're <br /> currently playing in 
                 Image of an app icon Apple Music, Image of an app icon Spotify, and Image of an app icon Doppler.</p>
-        <button className='btn' variant="outlined" onClick={()=> navigate("/PaymentPage")}>bill pay</button>
+        <button className='btn' variant="outlined" onClick={()=> navigate("/PaymentPage")}>Pay Now</button>
       </section1>
 
       <section2>
@@ -51,7 +50,7 @@ const HomePage = () => {
             </div>
       </section3>
 <br />
-      <section4 class="indent-1">
+      <section4 className="indent-1">
         <br />
             <section>
                 <div style={{marginTop: '15vh'}}>
