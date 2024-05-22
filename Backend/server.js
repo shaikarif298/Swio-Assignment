@@ -8,7 +8,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const stripe = Stripe(process.env.STRIPE);
 
-const db = mysql.createConnection('mysql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}');
+const db = mysql.createConnection('mysql://root:xcwbLLPVPHKTtuqFwrHWOVvdimMsusJA@roundhouse.proxy.rlwy.net:20646/railway'
+);
 
 db.connect((err) => {
   if (err) throw err;
