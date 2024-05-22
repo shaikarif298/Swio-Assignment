@@ -35,8 +35,8 @@ app.post('/create-checkout-session', async (req, res) => {
         quantity: 1,
       }],
       mode: 'payment',
-      success_url: 'http://localhost:3000/successpage?session_id={CHECKOUT_SESSION_ID}',
-      cancel_url: 'http://localhost:3000/cancelpage',
+      success_url: 'https://swio-assignment.onrender.com/successpage?session_id={CHECKOUT_SESSION_ID}',
+      cancel_url: 'https://swio-assignment.onrender.com/cancelpage',
     });
 
     res.json({ sessionId: session.id });
