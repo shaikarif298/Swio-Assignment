@@ -1,19 +1,19 @@
-require('dotenv').config();
 const express = require('express');
 const Stripe = require('stripe');
-const mysql = require('mysql');
+const { Pool } = require('pg');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const app = express();
-const stripe = Stripe(process.env.STRIPE);
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
-const db = mysql.createConnection('mysql://root:xcwbLLPVPHKTtuqFwrHWOVvdimMsusJA@roundhouse.proxy.rlwy.net:20646/railway'
-);
-
-db.connect((err) => {
-  if (err) throw err;
-  console.log('Connected to database');
+const pool = new Pool({
+  user: process.env.POSTGRES_USER,
+  host: process.env.POSTGRES_HOST,
+  database: process.env.POSTGRES_DB,
+  password: process.env.POSTGRES_PASSWORD,
+  port: process.env.POSTGRES_PORT,
 });
 
 app.use(cors());
@@ -46,21 +46,27 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-app.post('/save-transaction', (req, res) => {
+app.post('/save-transaction', async (req, res) => {
   const { name, amount, transactionID } = req.body;
-  const query = 'INSERT INTO transactions (name, amount, transactionID) VALUES (?, ?, ?)';
-  db.query(query, [name, amount, transactionID], (err, result) => {
-    if (err) throw err;
+  const query = 'INSERT INTO transactions (name, amount, transactionID) VALUES ($1, $2, $3)';
+  try {
+    await pool.query(query, [name, amount, transactionID]);
     res.send('Transaction saved');
-  });
+  } catch (err) {
+    console.error('Error saving transaction', err);
+    res.status(500).json({ error: 'Failed to save transaction' });
+  }
 });
 
-app.get('/transactions', (req, res) => {
+app.get('/transactions', async (req, res) => {
   const query = 'SELECT * FROM transactions';
-  db.query(query, (err, results) => {
-    if (err) throw err;
-    res.send(results);
-  });
+  try {
+    const result = await pool.query(query);
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error fetching transactions', err);
+    res.status(500).json({ error: 'Failed to fetch transactions' });
+  }
 });
 
 app.post('/retrieve-checkout-session', async (req, res) => {
@@ -79,7 +85,6 @@ app.post('/retrieve-checkout-session', async (req, res) => {
   }
 });
 
-
-app.listen(process.env.PORT, () => {
+app.listen(5000, () => {
   console.log('Server running on port 5000');
 });
